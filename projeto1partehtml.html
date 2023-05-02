@@ -1,0 +1,166 @@
+<html>
+    <head> <title> Formulario trabalho</title> 
+            <link rel="stylesheet" type="text/css" href="projeto1partecss.css">
+            <script>class Produto { 
+
+                salvar() {
+                    let produto = this.lerdados();
+                    this.validacampo(produto)
+                }
+            
+            
+            lerdados() {
+                let produto = {}
+            
+                produto.nome = document.getElementById('nome1').value;
+                produto.sobrenome = document.getElementById('nome2').value;
+                produto.cpf = document.getElementById('cpf1').value;
+                produto.sexo = document.getElementById('sexo').value;
+                produto.estado = document.getElementById('estado').value;
+                produto.nasc = document.getElementById('nasc').value;
+                produto.email = document.getElementById('email').value;
+                produto.sal = document.getElementById('sal').value;
+                produto.senha = document.getElementById('senha1').value;
+                produto.confsenha = document.getElementById('senha2').value;
+            
+                return produto;
+            }
+            
+            
+            validacampo(produto) {
+            
+                let msg = '';
+            
+            
+                if(produto.nome == '') {
+                    msg += '- Informe seu Nome \n'
+                }
+                if(produto.sobrenome == '') {
+                    msg += '- Informe seu Sobrenome \n'
+                }
+                if(produto.cpf == '') {
+                    msg += '- Informe seu CPF \n'
+                }
+                if(produto.s == '') {
+                    msg += '- Informe seu Sexo \n'
+            
+                }
+                if(produto.estado == '') {
+                    msg += '- Informe seu Estado \n'
+            
+                }
+                if(produto.nasc == '') {
+                    msg += '- Informe sua Data de Nascimento \n'
+            
+                }
+                if(produto.email == '') {
+                    msg += '- Informe seu E-mail \n'
+            
+                }
+                if(produto.sal == '') {
+                    msg += '- Informe seu Salário \n'
+            
+                }
+                if(produto.senha == '') {
+                    msg += '- Informe uma Senha \n'
+            
+                }
+                if(produto.confsenha == '') {
+                    msg += '- Confirme sua Senha \n'
+            
+                }
+                
+                if(msg != '') {
+                    alert(msg); 
+                    return false
+                }
+                return true;
+            
+            
+                 
+            }
+            
+            }
+            var produto = new Produto();</script>
+    
+    </head>
+    <body>
+        <h1 class="titulo"> I&A FORMULARIOS</h1>
+        <div class="quad">
+            <form class="nomes">
+                NOME: <input type="text" nome="nome" id="nome1" placeholder="Nome" >
+                <p></p>
+                SOBRENOME: <input type="text" nome="sobrenome" id="nome2" placeholder="sobrenome"> 
+                <p></p>
+                CPF: <input type="number" nome="cpf" id="cpf1" placeholder="xxx.xxx.xxx-xx" min="11" max="14">
+            </form>
+                <h4>Sexo</h4>
+                    <input type="radio" nome="sexo" id="sexo"  value="Masculoino"> Masculino
+                    <input type="radio" nome="sexo" value="female"> Feminino
+                    <input type="radio" nome="sexo" value="nf"> Prefiro não informar
+
+                <h4>SELECIONE SEU ESTADO</h4>
+                    <select name="estado" aria-placeholder="SELECIONE" id="estado">
+                        <option value="df"> Distrito Federal</option>
+                        <option value="mg"> Minas Gerais </option>
+                        <option value="sp"> São Paulo </option>
+                        <option value="rj"> Rio de Janeiro </option>
+                        <option value="ba"> Bahia </option>
+                        <option value="go"> Goiás </option>
+                        <option value="pr"> Paraná </option>
+                    </select>
+
+                <h4> INFORME SUA DATA DE NASCIMENTO </h4>
+                        <input type="date" name="nascimento" id="nasc" min="1900-01-01" max="2023-03-27">
+
+                <h4>INSIRA SEU EMAIL:</h4>
+                        <input type="email" id="email" required multiple placeholder="E-mail"> 
+
+                
+                        <h4> INFORME SEU SALARIO </h4>
+                        R$1320 <input type="range" name="barra" id="sal" required min="1320" max="100000" step="4340"> R$10.000
+
+                <h4>CRIE SUA SENHA</h4>
+                        
+                        <input type="password" name="senha" id="senha1" placeholder="senha">
+                        <p></p>
+                       <H4> CONFIRME SUA SENHA </H4>
+                        <input type="password" name="senha2" id="senha2" placeholder="confirme a senha">
+<P></P>
+            <form class="opiniao">
+                        <H4>DIGITE SUA OPNIÃO ABAIXO: </H4>
+                        <textarea cols="73" rows="10"></textarea>
+                        <p>(limite: 1.000 caracteres)</p>
+                        <p></p>
+
+            </form>
+                    <button   onclick="produto.salvar()"> Salvar </button>
+                <h3>VISITE NOSSO SITE  </h3>
+             <h3>  <a href="segunda pagina.html"> www.nossosite.com.br </a> </h3>
+                
+        </div>           
+
+ 
+
+
+
+
+
+
+
+
+
+
+            </form>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

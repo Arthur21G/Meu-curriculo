@@ -1,0 +1,91 @@
+html {
+    background-color: #520480;
+}
+
+body{
+    font-family: arial;
+    width: 800px;
+    margin:  auto;
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    border: 5px solid black;
+}
+
+main {
+    padding: 30px 50px;
+
+}
+
+.quest {
+    background-color: whitesmoke;
+    border: 3px solid  #520480;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+} 
+
+.inputline {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.inputlineB {
+    display: grid;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: 0;
+
+}
+
+button{
+    border: 0;
+    padding: 10px;
+    outline: 0;
+    background-color: #520480;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all ease  0.3s;
+}
+
+button:hover{
+    background-color: #420367;
+}
+
+.imgproz {
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    width: 95%;
+    text-align: center;
+    border:5px solid #520480;
+}
+
+table th {
+    background-color: #520480;
+    color: white;
+}
+
+.tabinf {
+    margin-top: 60px;
+
+}
+
+.tabinc{
+    margin-top: 200px;
+
+
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: large;
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Confirmação de Dados</title>
+  </head>
+  <body>
+    <h1>Confirmação de Dados</h1>
+    <form>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <button type="button" onclick="confirmData()">Confirmar</button>
+    </form>
+    <script>
+      function confirmData() {
+        // Recuperando valores dos campos de formulário
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+
+        // Validando se os campos foram preenchidos
+        if (name === "" || email === "") {
+          alert("Por favor, preencha todos os campos.");
+        } else {
+          // Exibindo mensagem de confirmação
+          var confirmationMessage = "Você digitou os seguintes dados:\n\n" +
+            "Nome: " + name + "\n" +
+            "Email: " + email + "\n\n" +
+            "Está correto?";
+          if (confirm(confirmationMessage)) {
+            // Redirecionando para outra página
+            window.location.href = "agradecimento.html";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+<form class="questselection">
+  <select name="estado" placeholder="SELECIONE">
+      <option value="n0"> Selecione</option>
+      <option value="n1" id="name"> 1 (Um)</option>
+      <option value="n2" id="estado"> 2 (Dois) </option>
+      <option value="n3" id="estado"> 3 (Tres) </option>
+      <option value="n4" id="estado"> 4 (Quatro) </option>
+      <option value="n5" id="estado"> 5 (Cinco) </option>
+      <option value="n6" id="estado"> 6 (Seis) </option>
+      <option value="n7" id="estado"> 7 (Sete) </option>
+      <option value="n8" id="estado"> 8 (Oito) </option>
+      <option value="n9" id="estado"> 9 (Nove) </option>
+      <option value="n10" id="estado"> 10 (Dez) </option>
+  </select>
+</form>

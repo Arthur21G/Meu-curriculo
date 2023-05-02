@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+
+    <Head>
+        <link rel="stylesheet" href="projeto2partecss.css">
+        <script>
+        class Produto { 
+
+            constructor() {
+                this.arrayProduto = [];
+            }
+        
+            
+            salvar() {
+                let produto = this.lerdados();
+                
+                if(this.validacampo(produto)) {
+                    this.adicionar(produto);
+        
+                }
+                this.listaTabela();
+                this.excluir();
+            }
+        
+            listaTabela()  {
+                let tbody = document.getElementById('tbody');
+                tbody.innerText = '';
+        
+                for(let i = 0; i < this.arrayProduto.length; i++ ) {
+                   let tr = tbody.insertRow();
+        
+                    let td_nome = tr.insertCell(); 
+                    let td_bim1 = tr.insertCell(); 
+                    let td_bim2 = tr.insertCell(); 
+                    let td_bim3 = tr.insertCell(); 
+                    let td_bim4 = tr.insertCell(); 
+                    let td_frecq = tr.insertCell();
+                    let td_somatotal = tr.insertCell();
+        
+                    td_nome.innerText = this.arrayProduto[i].nomealuno;
+                    td_bim1.innerText = this.arrayProduto[i].bim1;
+                    td_bim2.innerText = this.arrayProduto[i].bim2;
+                    td_bim3.innerText = this.arrayProduto[i].bim3;
+                    td_bim4.innerText = this.arrayProduto[i].bim4;
+                    td_frecq.innerText = this.arrayProduto[i].frecq;
+                    td_somatotal.innerText = Number(this.arrayProduto[i].bim1) + Number(this.arrayProduto[i].bim2) + Number(this.arrayProduto[i].bim3) + Number(this.arrayProduto[i].bim4);
+                    
+        
+                }
+            }
+        
+        
+            
+            
+        
+            adicionar(produto) {
+                this.arrayProduto.push(produto);
+            }
+        
+        
+            lerdados() {
+                let produto = {}
+        
+                produto.nomealuno = document.getElementById('nome').value;
+                produto.bim1 = document.getElementById('pb').value;
+                produto.bim2 = document.getElementById('sb').value;
+                produto.bim3 = document.getElementById('tb').value;
+                produto.bim4 = document.getElementById('qb').value;
+                produto.frecq = document.getElementById('frec').value;
+                
+        
+        
+                return produto;
+        
+        
+        
+        
+        
+            }
+        
+            excluir() {
+                document.getElementById('nome').value= ''; 
+                document.getElementById('pb').value = '';
+                document.getElementById('sb').value = '';
+                document.getElementById('tb').value = '';
+                document.getElementById('qb').value = '';
+                document.getElementById('frec').value = '';
+        
+        
+            }
+        
+            validacampo(produto) {
+        
+                let msg = '';
+        
+        
+                if(produto.nomealuno == '') {
+                    msg += '-Informe o nome do aluno \n'
+                }
+                if(produto.bim1 == '') {
+                    msg += '-Informe a nota do 1º bimestre  do aluno \n'
+                }
+                if(produto.bim2 == '') {
+                    msg += '-Informe a nota do 2º bimestre  do aluno \n'
+                }
+                if(produto.bim3 == '') {
+                    msg += '-Informe a nota do 3º bimestre  do aluno \n'
+                }
+                if(produto.bim4 == '') {
+                    msg += '-Informe a nota do 4º bimestre  do aluno \n'
+                }
+                if(produto.frecq == '') {
+                    msg += '-Informe a frequencia do  aluno \n'
+                }
+                if(msg != '') {
+                    alert(msg); 
+                    return false
+                }
+                return true;
+        
+        
+                 
+            }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+        
+        var produto = new Produto();</script>
+    </Head>
+
+    <body>
+
+        <div class="imgproz">
+            <img src="img/logo-proz.png" width="250 px"; height="80px">
+        </div>
+
+
+
+
+        <main>
+            <div class="titulo"> CENTRAL PROFESSOR </div>
+            <div class="quest">
+                
+                <div class="inputline">
+                    <label> Nome </label>
+                        <input type="text" id="nome" placeholder="Nome do aluno">
+                </div>
+                
+                <div class="inputline">
+                    <label> 1° Bimestre </label>
+                        <input type="number" id="pb" placeholder="Nota 1° Bimestre" required  min="0" max="25" step="1">
+                </div>
+                
+                <div class="inputline">
+                    <label> 2° Bimestre </label>
+                        <input type="number" id="sb" placeholder="Nota 2° Bimestre" required  min="0" max="25" step="1">
+                </div>
+                
+                <div class="inputline">
+                    <label> 3° Bimestre </label>
+                        <input type="number" id="tb" placeholder="Nota 3° Bimestre" required  min="0" max="25" step="1">
+                </div>
+                
+                <div class="inputline">
+                    <label> 4° Bimestre </label>
+                        <input type="number" id="qb" placeholder="Nota 4° Bimestre" required  min="0" max="100" step="1">
+                </div>
+
+                <div class="inputline">
+                    <label> Faltas Totais  </label>
+                        <input type="number" id="frec" placeholder="Número de faltas anual">
+                </div>
+
+                   
+                <div class="inputline">
+                    <label> Situação do aluno: </label>
+                    <select name="st">
+                    <option value="ap"> Aprovado</option>
+                    <option value="rp"> Reprovado</option>
+                    <option value="rc"> Recuperação</option>
+                    
+                    </select>   
+                </div>
+
+
+
+                <button   onclick="produto.salvar()"> Salvar </button>
+                <button   onclick="produto.excluir()"> excluir </button>
+                
+            </div>
+        </main>
+
+
+        <center>
+
+            <h1> <b> RESULTADOS ESCOLARES </b> </h1>
+            <h2>MATEMÁTICA</h2>
+
+            <table border="5">
+               <thead>
+                    <th>  Nome  </th>
+                    <th>  1º Bimestre  </th>
+                    <th>2º Bimestre</th>
+                    <th>3º Bimestre</th>
+                    <th>4º Bimestre</th>
+                    <th>Frequência</th>
+                    <th>Soma Total</th>
+
+                  
+              </thead>
+              <tbody id="tbody">
+            
+                </tbody>
+            </table>
+
+            
+            <table border="3" class="tabinf">
+
+                <tr>
+                    <th colspan="2">Requisitos para aprovação</th>
+                </tr>
+
+                <tr>
+                    <th>Nota</th>
+                    <td>Maiores que 60 no total </td>
+                </tr>
+
+                <tr>
+                    <th>Frequência</th>
+                    <td>Maiores que 50% no total</td>
+                </tr>
+
+             </table>
+
+             <p></p>
+
+             <table border="3">
+
+                <tr>
+                    <th colspan="2">Requisitos para Recuperação</th>
+                </tr>
+
+                <tr>
+                    <td>Mínimo um requisto para aprovação (nota ou Frequência) </td>
+                </tr>
+
+             </table>
+        </center>
+
+    </body>
+
+</html>
+    

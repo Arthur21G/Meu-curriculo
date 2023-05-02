@@ -1,0 +1,109 @@
+html {
+    background-image: url(img/7bc08538ffbffcf834ab32e026dfc20c.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+body {
+    font-family: arial;
+    width: 600px;
+    margin: 0 auto;
+    background-color: none;
+    padding: 50px 100px 100px 100px;
+    
+
+
+    
+
+
+
+
+}
+
+.quad {
+    background-color: #5190a9;
+    border: 3px solid #013b45;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0px;
+    color: black;
+
+
+
+
+}
+
+h1 {
+    color: #013b45;
+    font-family: times new roman;
+    margin-top: 10px;
+    text-align: center;
+
+
+
+}
+
+.nomes {
+    
+    display: grid;
+    margin-bottom: 40px;
+
+
+    
+    
+
+
+}
+
+.cpf {
+    display: ruby;
+
+}
+
+input {
+    text-align: left;
+    padding: 10px ;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: 0;
+    border: 3px solid #013b45;
+    
+
+
+}
+
+
+
+.op {
+    display: grid;
+    padding: 100px 100px 100px 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: 0;
+
+}
+
+
+
+button {
+    border: 0;
+    padding: 10px;
+    outline: 0;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+
+
+
+
+
+}
+
+h3 {
+    text-align: center;
+
+}
+

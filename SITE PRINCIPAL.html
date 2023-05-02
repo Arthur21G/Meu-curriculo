@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Parte css.css">
+        <script src="parte java 2.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    </header>
+
+    <body>
+
+        
+        <div class="apresentacao">
+            
+            <img class="foto" src="img/icondevcomp1.png"/>
+            </center>
+            <p class="texto-com-contorno" id="text">OLÁ, SOU O ARTHUR</p>
+            <p class="subtitle">VENHA CONHECER UM POUCO MAIS SOBRE MIM</p>
+            
+        </div>
+        
+        
+        
+        
+        
+        <div class="divisao">
+            <a href="#marcacao" class="desc"> SOBRE MIM  </a>
+            <a href="#formacoes" class="desc" > FORMAÇÕES  </a>
+            <a href="#projtitle" class="desc"> PROJETOS  </a>
+            <a href="#infpessoaistitle" class="desc"> INFORMAÇÕES PESSOAIS  </a>
+            <a href="#questtitle" class="desc"> QUESTIONÁRIO </a>
+
+        </div>
+
+        <a  href="#marcacao" ><img class="seta" id="seta" src="img/setagif.gif"></a>
+        <p class="carcacaosobre" id="marcacao"></p>
+        
+        
+        
+        
+        
+        <div class="inf" id="inf">
+            <img class="perfil" src="img/foto1.jpg"/>  
+            <h3 class="textinf">Olá sou o Arthur, um jovem que sempre gostou de tecnologia e tudo sobre o tema. 
+                Muito jovem e com muita curiosidade comecei a pesquisar e saber mais sobre tecnologias. Sou uma pessoa muito proativa onde sempre busco meios complexos para realizar deveres, pois penso que com maior dificuldade consigo entregar trabalhos mais elaborados e aprendo com essas adversidades.
+                Bom, tentei me definir em poucas palavras, mas para me conhecer mais me chame em algum meio de contato ao final da página.
+            </h3>
+
+
+
+
+
+        </div>
+
+        
+        <div class="formacoes" id="formacoes">
+            <p>FORMAÇÕES</p>
+        </div>
+        
+        
+        <div class="infcedaspy">
+            <img class="cedaspy" src="img/cedaspy.png"/>
+            <p class="textinf">
+                Entre 2018 a 2020 ingressei no instituto cedaspy de ensino, onde fiz um curso profissionalizante de T.I, 
+                sendo um dos destaques da turma me formando em 30 de agosto de 2020.
+            </p>
+
+
+
+        </div>
+
+        <div class="infproz">
+            <img class="proz" src="img/proz.png"/>
+            <p class="textinf">Atualmente estudo no instituto proz educação profissional, 
+                onde faço um curso técnico de desenvolvimento de sistemas. Onde pretendo concluir em julho de 2024.
+            </p>
+
+
+
+        </div>
+
+        <div class="projtitle" id="projtitle">
+            <p>ALGUNS PROJETOS</p>
+        </div>
+
+
+        <div class="projetos">
+            <div>
+            <img class="projeto2" src="img/projeto1.png"/>
+            <a href="projeto1partehtml.html" class="infproj1"> Clique aqui para abrir o arquivo  </a>
+            </div>
+            <div>
+            <img class="projeto2" src="img/projeto2.png"/>
+            <a href="projeto2partehtml.html" class="infproj2"> Clique aqui para abrir o arquivo  </a>
+            </div>
+        </div>
+
+
+        <div class="infpessoaistitle"  id="infpessoaistitle">
+            <p>INFORMAÇÕES PESSOAIS</p>
+        </div>
+
+        <div class="infpessoais">
+        <p> NOME: Arthur Gabriel Ferreira Silva</p>
+        <p>EMAIL: agfds2005@gmail.com</p>
+        <p>TELEFONE: (31) 98696-4750</p>
+        <p>ENDEREÇO: Rua Capitão Sergio Pires, Minas Caixa - Belo Horizonte</p>
+
+        <a href="https://api.whatsapp.com/send?phone=5531986964750&text=Olá">
+            <img class="whats" src="img/iconwhatsgreen.png">
+        </a>
+        <a href="https://github.com/Arthur21G">
+            <img class="git" src="img/icongitorange2.png">
+        </a>
+        
+        </div>
+
+        <div class="questtitle"  id="questtitle">
+            <p>QUESTIONÁRIO</p>
+            <h6 class="questsubtitle">Por favor, responda um pequeno questionário avaliando esta pagina</h6>
+        </div>
+        
+               
+        
+        <div class="quest">
+            <p class="radiostitle">QUAL NOTA VOCÊ DARIA PARA ESTA PAGINA</p>
+            
+            
+            <form class="questselection">
+                <select name="nota" placeholder="SELECIONE">
+                    <option value="Nota 1" id="name"> 10 (Dez)</option>
+                    <option value="Nota 2" id="name"> 9 (Nove) </option>
+                    <option value="Nota 3" id="name"> 8 (Oito) </option>
+                    <option value="Nota 4" id="name"> 7 (Sete) </option>
+                    <option value="Nota 5" id="name"> 6 (Seis) </option>
+                    <option value="Nota 6" id="name"> 5 (Cinco) </option>
+                    <option value="Nota 7" id="name"> 4 (Quatro) </option>
+                    <option value="Nota 8" id="name"> 3 (três) </option>
+                    <option value="Nota 9" id="name"> 2 (Dois) </option>
+                    <option value="Nota 10" id="name"> 1 (Um) </option>
+                </select>
+            </form>
+            
+            
+            
+            
+            <form class="questbox">
+                <H5>DEIXE UMA OPINIÃO SOBRE A PAGINA: </H5>
+                <textarea id="email" cols="73" rows="10"></textarea>
+                <H6 class="descbox">(limite: 500 caracteres)</H6>
+            </form>
+            <center>   
+           <button type="button" onclick="confirmData()">Confirmar</button>
+            </center> 
+        </div>
+        
+        
+        
+        
+        
+        
+        <script>
+            function confirmData() {
+              var name = document.getElementById("name").value;
+              var email = document.getElementById("email").value;
+      
+             if (name === "" || email === "") {
+                alert("Por favor, preencha todos os campos.");
+              } 
+              
+                else {
+                    window.location.href = "agradecimento.html";
+              }
+            }
+          </script>
+
+
+
+
+
+
+        <footer>
+            <div class="rodape">
+               <p> Feito  por: Arthur Gabriel, TODOS DIREITOS RESERVADOS - 2023</p>
+            </div>
+        </footer>
+    
+   
+    
+
+
+
+
+    </body>
+
+</html>
